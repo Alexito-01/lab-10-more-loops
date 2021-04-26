@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		var maximum_stories = 404;
+		var userstring = prompt("On what floor of the building is your office?");
+		var usernum = parseInt(userstring);
+
+		while (usernum >= maximum_stories)
+		{
+			userstring = prompt("You entered: " + userstring + ". But there are only " + maximum_stories + " floors in this building. Try again... ");
+			usernum = parseInt(userstring);
+		}
+
+		document.write("Congrats! You work on floor: " + userstring);
+	</script>
+</body>
+</html>
