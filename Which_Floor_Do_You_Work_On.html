@@ -6,16 +6,14 @@
 <body>
 	<script>
 		var maximum_stories = 404;
-		var userstring = prompt("On what floor of the building is your office?");
-		var usernum = parseInt(userstring);
-
-		while (usernum >= maximum_stories)
+		var usernum = parseInt(prompt("On what floor of the building is your office?"));
+		
+		while (usernum > maximum_stories)
 		{
-			userstring = prompt("You entered: " + userstring + ". But there are only " + maximum_stories + " floors in this building. Try again... ");
-			usernum = parseInt(userstring);
+			usernum = parseInt(prompt("You entered: " + usernum + ". But there are only " + maximum_stories + " floors in this building. Try again... "));
 		}
 
-		document.write("Congrats! You work on floor: " + userstring);
+		document.write("Congrats! You work on floor: " + usernum);
 	</script>
 </body>
 </html>
